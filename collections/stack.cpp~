@@ -18,7 +18,6 @@ void Stack::disp(stack<int> s)
 	cout<<"size is "<<s.size()<<endl;
 	cout<<"top is "<<s.top()<<endl;
 }
-
 int main()
 {
 	Stack obj;
