@@ -8,19 +8,23 @@ public:
 	void insert(vector<int> *,int);
 	void disp(vector<int>);
 };
-void insert(vector<int> *vect,int data)
+void Vector::insert(vector<int> *vect,int data)
 {
-vect->push(data);
+vect->push_back(data);
 }
-void disp(vector<int> vect)
+void Vector::disp(vector<int> vect)
 {
-cout<<vect.size()<<endl;
+vector<int> ::iterator itr;
+    for (itr = vect.begin(); itr != vect.end(); ++itr)
+        cout << *itr << '\t';
+cout<<"size is \t"<<vect.size()<<endl;
 }
 int main()
 {
 Vector obj;
 vector<int> vect;
 obj.insert(&vect,10);
+obj.insert(&vect,20);
 obj.disp(vect);
 return 0;
 }
