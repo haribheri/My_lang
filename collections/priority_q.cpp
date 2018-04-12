@@ -1,18 +1,19 @@
 #include<bits/stdc++.h>
-#include<priority_queue>
+#include<iostream>
+#include<queue>
 #include<vector>
 using namespace std;
 
-struct man
+typedef struct node
 {
   string name;
   int priority; 
-};
+}node;
 
 class comparator
 {
  public:
-   bool operator()(const man& a, const man& b)
+   bool operator()(const node& a, const node& b)
    {
         return a.priority<b.priority;
    }
@@ -20,8 +21,8 @@ class comparator
 
 int main()
 {
-   man arr[5];
-   priority_queue<man, vector<man>, comparator> pq;
+   node arr[5];
+   priority_queue<node, vector<node>, comparator> pq;
 
    for(int i=0; i<3; i++)
    {
